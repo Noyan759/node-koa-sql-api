@@ -21,7 +21,11 @@
     "koa": "^2.5.1",
     "koa-body-parser": "^1.1.2",
     "koa-bodyparser": "^4.2.1",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "mysql2": "^1.5.3",
+    "reflect-metadata": "^0.1.12",
+    "sequelize": "^4.38.0",
+    "sequelize-typescript": "^0.6.5"
   },
   "devDependencies": {
     "@types/koa": "^2.0.46",
