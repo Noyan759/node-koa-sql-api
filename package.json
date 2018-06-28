@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Noyan759/node-koa-sql-api#readme",
   "dependencies": {
+    "@types/joi": "^13.3.0",
+    "joi": "^13.4.0",
     "koa": "^2.5.1",
     "koa-body-parser": "^1.1.2",
     "koa-bodyparser": "^4.2.1",
@@ -25,7 +27,8 @@
     "mysql2": "^1.5.3",
     "reflect-metadata": "^0.1.12",
     "sequelize": "^4.38.0",
-    "sequelize-typescript": "^0.6.5"
+    "sequelize-typescript": "^0.6.5",
+    "update": "^0.7.4"
   },
   "devDependencies": {
     "@types/koa": "^2.0.46",

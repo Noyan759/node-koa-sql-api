@@ -3,8 +3,8 @@ import * as bodyParser from 'koa-bodyparser';
 import { Sequelize } from 'sequelize-typescript'
 
 import { config } from './config';
-import { indexRoutes } from './routes/index';
-import { todoRoutes } from './routes/todo';
+import { indexRoutes } from './controllers/index';
+import { todoRoutes } from './controllers/todo';
 
 const app = new Koa();
 
