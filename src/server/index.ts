@@ -1,6 +1,8 @@
 import * as Koa from 'koa';
 import * as bodyParser from 'koa-bodyparser';
 import { Sequelize } from 'sequelize-typescript'
+import * as session from 'koa-session';
+import * as passport from 'koa-passport';
 
 import { config } from './config';
 import { indexRoutes } from './controllers/index';
@@ -19,10 +21,19 @@ const sequelize = new Sequelize({
     ]
 });
 
-sequelize.sync({ force: true });
+// sequelize.sync({ force: true });
+
+// sessions
+app.keys = ['super-secret-key'];
+app.use(session(app));
 
 // body parser
 app.use(bodyParser());
+
+// authentication
+require('./auth');
+app.use(passport.initialize());
+app.use(passport.session());;
 
 // routes
 app.use(indexRoutes);
