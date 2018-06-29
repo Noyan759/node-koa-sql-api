@@ -8,11 +8,11 @@ import {
 } from 'sequelize-typescript';
 
 @DefaultScope({
-    attributes: ['id', 'username', 'password']
+    attributes: ['id', 'name']
 })
 
 @Table
-export class testTodo extends Model<testTodo> {
+export class testUser extends Model<testUser> {
 
     @PrimaryKey
     @AutoIncrement
@@ -20,7 +20,12 @@ export class testTodo extends Model<testTodo> {
     id: number;
 
     @Column
-    username: string;
+    name: string;
+
+    @Column({
+        field: 'secretKey'
+    })
+    secret: string;
 
     @Column
     password: string;

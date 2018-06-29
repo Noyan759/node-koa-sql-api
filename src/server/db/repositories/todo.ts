@@ -1,6 +1,4 @@
-import {
-    testTodo
-} from '../models/testTodo';
+import { testTodo } from '../models/testTodo';
 
 let getAllTodos = () => {
     return testTodo.findAll();
